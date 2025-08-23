@@ -1,34 +1,50 @@
-# 📌 FastDeploy — Speed: Launch Product Faster
-<img width="808" height="468" alt="esquema3" src="https://github.com/user-attachments/assets/df8405a8-be6a-4b01-9206-f262535fc5b7" />
+# FastDeploy: Accelerated Product Launch
+<img width="808" height="468" alt="esquema3" src="https://github.com/user-attachments/assets/75b7c5a6-cda4-4cd4-b027-397f8930b6f4" />
 
-## 🎯 Objective
-Reduce the launch time for new features, minimizing time-to-market and accelerating value delivery to customers.
+## Objective
+Minimize the time required to deploy new features, enabling faster delivery of value to customers.
 
-## 🚀 Technical Implementation
-- Developed a simple **Python (FastAPI)** API for product registration.
-- Configured **CI/CD** in **GitHub Actions**:
-  - Each push triggers automated tests.
-  - If tests pass, a **Docker** image is generated.
-  - Automatic deployment to **Heroku** (or local **Kubernetes**).
-- Used **Docker** to ensure the application runs consistently across environments.
-- Created basic unit tests to validate critical API functionalities.
+## How It Works
+- **API Development**: Developed a Python API using FastAPI for product registration.
+- **CI/CD Pipeline**: Configured GitHub Actions to:
+  - Execute automated tests on every push (configured in `.github/workflows/ci.yml`).
+  - Build and push a Docker image to Docker Hub upon successful tests (configured in `.github/workflows/cd.yml`).
+- **Containerization**: Used Docker to ensure consistent application behavior across environments.
+- **Testing**: Implemented tests with Pytest to validate critical API functionality.
 
-## 💡 Value Delivered
-- **Faster**: Each commit goes to production automatically.
-- **More Reliable**: Tests prevent bugs from reaching production.
-- **Less Manual Effort**: Automated build and deployment reduce rework.
+## Benefits
+- **Speed**: Produces production-ready Docker images in minutes per commit.
+- **Reliability**: Automated tests prevent bugs from reaching production.
+- **Efficiency**: Automated build and push processes reduce manual effort.
 
-## 📊 Impact Metrics
-- Lead time for delivery reduced from 2 days to 10 minutes.
-- Rapid feedback for developers, enabling immediate fixes.
-- Demonstrates continuous delivery and automation as real business value.
+## Results
+- Deployment time reduced from 2 days to 10 minutes.
+- Rapid feedback loop for developers, enabling immediate fixes.
+- Demonstrated value through continuous delivery and automation.
 
-## 🛠️ Tech Stack
+## Technologies
 - **Language & Framework**: Python, FastAPI
-- **Containers & Orchestration**: Docker
+- **Containerization**: Docker
 - **CI/CD**: GitHub Actions
-- **Deployment**: Heroku or local Kubernetes
 - **Testing**: Pytest
-- **Monitoring**: Optionally Grafana / centralized logs
 
-## 📂 Project Structure
+## Project Structure
+```
+.
+├── .github
+│   └── workflows
+│       ├── ci.yml
+│       └── cd.yml
+├── app
+│   ├── main.py
+│   └── test_main.py
+├── Dockerfile
+├── README.md
+└── requirements.txt
+```
+
+## Key Learnings
+- Configured GitHub Actions for automated testing on every push.
+- Automated Docker image building and publishing to Docker Hub.
+- Recognized the importance of fast, reliable tests to prevent production issues.
+- Understood how automation accelerates delivery and enables rapid feedback.
