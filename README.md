@@ -1,4 +1,5 @@
 # 📌 FastDeploy — Speed: Launch Product Faster
+<img width="808" height="468" alt="esquema3" src="https://github.com/user-attachments/assets/df8405a8-be6a-4b01-9206-f262535fc5b7" />
 
 ## 🎯 Objective
 Reduce the launch time for new features, minimizing time-to-market and accelerating value delivery to customers.
